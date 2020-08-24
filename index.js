@@ -39,4 +39,4 @@ cron.schedule('* * * * *', function () {
   console.log('Pushed to Redis');
 });
 
-app.listen('3128');
+app.listen(process.env.PORT || 3128);
