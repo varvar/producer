@@ -20,6 +20,10 @@ client.on('connect', function () {
 
 app = express();
 
+app.use('/', (req, res) => {
+  res.send({});
+});
+
 cron.schedule('* * * * *', function () {
   console.log('---------------------');
   const points = [
